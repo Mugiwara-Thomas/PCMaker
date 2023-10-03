@@ -13,6 +13,9 @@ const List = styled.ul`
 `;
 const Logo = styled.h1`
   font-size: 3pc;
+  .span{
+    color:'#000'
+  }
 `;
 
 const Item = styled.li`

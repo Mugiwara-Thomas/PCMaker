@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import { CardPai, CardFilho } from "./style";
+import { CardPai, CardFilho } from './style';
+
 function Card({endereco}) {
   return (
     <>

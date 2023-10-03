@@ -5,7 +5,10 @@ function Nav() {
     <>
       <NavBar>
         <List>
-          <Logo>PCMaker</Logo>
+          <Logo>
+            <span>PCM</span>
+            aker
+          </Logo>
         </List>
         <List>
           <Item>Home</Item>
