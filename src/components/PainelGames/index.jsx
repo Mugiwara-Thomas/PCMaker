@@ -6,6 +6,6 @@ const PainelElement = styled.div`
     padding: 9pc;
     display: flex;
     flex-wrap: wrap;
-`
+    `;
 
 export default PainelElement;
