@@ -2,6 +2,7 @@ import Card from "./components/Card";
 import Nav from "./components/Navbar"
 import Painel from "./components/PainelGames";
 import GlobalStyle from "./styles/GlobalStyle";
+import SearchGameBar from "./components/SearchGameBar";
 
 function App() {
   return (
