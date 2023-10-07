@@ -6,7 +6,7 @@ function Nav() {
       <NavBar>
         <List>
           <Logo>
-            <span>PCM</span>
+            <span className="span">PCM</span>
             aker
           </Logo>
         </List>
