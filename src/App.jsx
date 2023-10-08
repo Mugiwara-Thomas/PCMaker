@@ -4,6 +4,8 @@ import Painel from "./components/PainelGames";
 import GlobalStyle from "./styles/GlobalStyle";
 import InputField from "./components/Input";
 import ViewSelectedGamesButton from "./components/ViewSelectedGamesButton";
+import PageChooserBar from "./components/PageChooser";
+import FooterBar from "./components/Footer";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
         <Card endereco={"https://www.digiseller.ru/preview/1034230/p1_3295515_507b2716.jpeg"}/>
         <Card endereco={"https://th.bing.com/th/id/R.8fea3a8d881c15570b1bf26847f4bc07?rik=pX8GQOPfY6Ajhw&pid=ImgRaw&r=0"}/>
       </Painel>
+      <PageChooserBar />
+      <FooterBar />
     </>
   );
 }
