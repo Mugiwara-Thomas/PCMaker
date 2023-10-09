@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { PageChooser, PageButton } from "./style";
 
 const pages = ['1', '2', '3', '4', '5'];

@@ -10,7 +10,7 @@ const CardPai = styled.div`
   &:hover {
     box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
   }
-  margin: 1pc 0.870pc;
+  margin: 1pc 0.57pc;
 `;
 
 const CardFilho = styled.div`

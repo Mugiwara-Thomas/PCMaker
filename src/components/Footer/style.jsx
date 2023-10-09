@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 const Footer = styled.div`
+    grid-area: footer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 150px;
+    height: 100%;
     background-color: #fff;
+    color: black
 `;
 
 const ContactInfo = styled.div`

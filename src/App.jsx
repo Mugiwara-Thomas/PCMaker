@@ -2,18 +2,17 @@ import Card from "./components/Card";
 import Nav from "./components/Navbar"
 import Painel from "./components/PainelGames";
 import GlobalStyle from "./styles/GlobalStyle";
-import InputField from "./components/Input";
-import ViewSelectedGamesButton from "./components/ViewSelectedGamesButton";
 import PageChooserBar from "./components/PageChooser";
 import FooterBar from "./components/Footer";
+import { WrapperGeneral } from "./styles/GridApp"
+import SelectionGames from "./components/SelectionGames";
 
 function App() {
   return (
-    <>
+    <WrapperGeneral>
       <GlobalStyle />
       <Nav />
-      <InputField />
-      <ViewSelectedGamesButton/>
+      <SelectionGames />
       <Painel>
         <Card endereco={"https://img.ibxk.com.br/2018/05/03/red-dead-03201115279005.jpg?ims=328x"}/>
         <Card endereco={"https://m.media-amazon.com/images/I/91Aa9ZIAaoL._AC_UF1000,1000_QL80_.jpg"}/>
@@ -37,8 +36,8 @@ function App() {
         <Card endereco={"https://th.bing.com/th/id/R.8fea3a8d881c15570b1bf26847f4bc07?rik=pX8GQOPfY6Ajhw&pid=ImgRaw&r=0"}/>
       </Painel>
       <PageChooserBar />
-      <FooterBar />
-    </>
+      <FooterBar />  
+    </WrapperGeneral>
   );
 }
 

@@ -2,10 +2,13 @@ import styled from "styled-components";
 
 const PainelElement = styled.div`
     width: 80vw;
-    height: 100vh;
-    padding: 9pc;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
+    grid-area: main;
+    margin-top: 2pc;
+    justify-content: space-between;
     `;
 
 export default PainelElement;
