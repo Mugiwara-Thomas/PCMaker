@@ -8,7 +8,12 @@ const PainelElement = styled.div`
     margin: auto;
     grid-area: main;
     margin-top: 2pc;
-    justify-content: space-between;
+    
+    ${(props) => {
+        if(props.response === true){
+            return `justify-content:center;`
+        }
+    }}
     `;
 
 export default PainelElement;
