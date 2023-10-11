@@ -1,13 +1,18 @@
 import styled from "styled-components";
 
 const PainelElement = styled.div`
-    width: 80vw;
+    width: 90%;
+    justify-content: center;
     height: 100%;
     display: flex;
-    flex-wrap: wrap;
+    ${(props) => {
+        if(props.response !== true){
+            return `flex-wrap: wrap;`
+        }
+    }}
+
     margin: auto;
     grid-area: main;
-    margin-top: 2pc;
     
     ${(props) => {
         if(props.response === true){

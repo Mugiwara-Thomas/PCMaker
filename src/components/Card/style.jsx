@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const CardPai = styled.div`
-  width: 200px;
-  height: 254px;
+  width: 13pc;
+  height: 16pc;
   background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
   border-radius: 20px;
   transition: all 0.3s;
@@ -14,8 +14,8 @@ const CardPai = styled.div`
 `;
 
 const CardFilho = styled.div`
-  width: 200px;
-  height: 254px;
+  width: 13pc;
+  height: 16pc;
   background-image: url(${(props) => props.url});
   background-size: cover;
   transition: all 0.2s;

@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         // rota response seleção manual
-        path: "selectGame/:responseID",
+        path: "selectGame/response/:responseID",
         element: <Response />,
         errorElement: <ErrorPage />,
       },
