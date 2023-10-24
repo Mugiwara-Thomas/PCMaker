@@ -1,32 +1,35 @@
 import styled from "styled-components";
 
 const NavBar = styled.div`
-  padding: 2pc;
   display: flex;
   align-items: center;
   grid-area: nav;
   justify-content: space-between;
-  border-bottom: 2px solid #4F4A4A;
+  border-bottom: 1px solid #4F4A4A;
 `;
 
 const List = styled.ul`
   display: flex;
-  padding: 0pc 1pc;
 `;
 
 const Logo = styled.h1`
-  font-size: 3pc;
+  font-size: 2pc;
+  padding-left: 1pc;
   color: #fff;
   & .span {
     color: #D961D7;
   }
   cursor: pointer;
+
 `;
 
 const Item = styled.li`
-  font-size: 2pc;
-  padding: 0pc 1pc;
+  font-size: 1pc;
+  padding: 1.5pc;
   cursor: pointer;
+  &:hover {
+    background-color: #D961D7;
+  }
 `;
 
 export { NavBar, List, Item, Logo };
