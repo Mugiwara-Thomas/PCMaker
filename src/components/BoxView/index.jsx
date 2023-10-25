@@ -26,18 +26,23 @@ const BoxLogin = styled.div`
   width: 70%;
   border-radius: 10px;
   display: flex;
-  height: 30pc;
+  height: 60%;
   background-color: #BC75BC;
-  max-width: 60pc;
-
+  max-width: 80%;
+  @media (width <= 1500px) {
+      max-width: 10%;
+  }
 `;
 
 const BoxLoginInner = styled.div`
   width: 30%;
   border-radius: 10px;  
-  height: 28pc;
+  height: 95%;
   margin: 1pc 1pc 0pc auto;
   background-color: #ffffff;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const ContainerLogin = styled.div`

@@ -1,11 +1,11 @@
 import { ButtonStyle } from "./style";
 
 
-function Button() {
+function Button({texto}) {
     return (
         <>
             <ButtonStyle>
-                Login
+                {texto}
             </ButtonStyle>
         </>
     )

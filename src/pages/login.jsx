@@ -9,11 +9,11 @@ function Login() {
     <ContainerLogin>
       <GlobalStyle />
       <BoxLogin>
-        <StyledImage width="30" height="30" ml="5" src="src/assets/imageLogin.png" />
+        <StyledImage width="100" height="100" ml="5" src="src/assets/imageLogin.png" />
         <BoxLoginInner>
           <InputBox></InputBox>
           <InputBox></InputBox>
-          <Button></Button>
+          <Button texto="Login"></Button>
         </BoxLoginInner>
       </BoxLogin>
     </ContainerLogin>
