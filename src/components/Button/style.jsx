@@ -1,19 +1,24 @@
 import styled from 'styled-components';
 
 const ButtonStyle = styled.button`
-  border-radius: 17px; 
-  padding: 2% 10%; 
+  border-radius: 10px; 
+  padding: 2% 35%; 
   font-size: 1em; 
   justify-content: center;
+  
 
-  max-width: 15vw;
   background-color: #9B469A; 
-  border: none; 
+  border: 1px solid #000;
   cursor: pointer; 
 
-  font-size: 150%;
+  margin: 1pc 0pc;
+  font-size: 100%;
   color: white; 
   font-weight: bold;
+
+  &:hover {
+    background-color: #D961D7;
+  }
 `;
 
 export { ButtonStyle };

@@ -30,15 +30,17 @@ const BoxLogin = styled.div`
   background-color: #BC75BC;
   max-width: 80%;
   @media (width <= 1500px) {
-      max-width: 10%;
+      max-width: 60%;
+      height: 80%;
   }
 `;
 
 const BoxLoginInner = styled.div`
-  width: 30%;
+  width: 60%;
   border-radius: 10px;  
   height: 95%;
-  margin: 1pc 1pc 0pc auto;
+  margin-top: 1.5%;
+  margin-right: 2%;
   background-color: #ffffff;  
   display: flex;
   flex-direction: column;
