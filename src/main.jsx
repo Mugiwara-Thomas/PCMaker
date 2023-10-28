@@ -14,6 +14,7 @@ import "./styles/GlobalStyleCSS.css";
 import SelectGame from './pages/selectGame.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import Response from './pages/response.jsx';
+import Register from './pages/register.jsx';
 
 // variável que terá a lista de rotas
 const router = createBrowserRouter([
@@ -39,6 +40,12 @@ const router = createBrowserRouter([
         // rota response seleção manual
         path: "selectGame/response/:responseID",
         element: <Response />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        // rota response seleção manual
+        path: "register",
+        element: <Register />,
         errorElement: <ErrorPage />,
       },
       // * Rotas que só irão funcionar quando o implementarmos a IA
