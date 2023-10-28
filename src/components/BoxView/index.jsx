@@ -39,7 +39,7 @@ const BoxLoginInner = styled.div`
   width: 60%;
   border-radius: 10px;  
   height: 95%;
-  margin-top: 1.5%;
+  margin-top: 1%;
   margin-right: 2%;
   background-color: #ffffff;  
   display: flex;
@@ -57,7 +57,27 @@ const ContainerLogin = styled.div`
   align-items:center; 
 `;
 
+const ContainerRegister = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  height: 100vh; // 100% view height
+  width: 100vw;
+  justify-content:center; 
+  align-items:center; 
+`;
 
+const BoxRegisterInner = styled.div`
+  width: 60%;
+  border-radius: 10px;  
+  height: 95%;
+  margin-top: 1%;
+  margin-right: 2%;
+  background-color: #ffffff;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
-
-export { BoxViewOver, BoxViewUnder, BoxLogin, ContainerLogin, BoxLoginInner };
+export { BoxViewOver, BoxViewUnder, BoxLogin, ContainerLogin, BoxLoginInner, ContainerRegister, BoxRegisterInner };
