@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { increment } from '../../features/marketingCart/marketingCart';
 
 function SelectionGames () {
-    const numeroDeJogos = useSelector((state) => state.carrinho.list);
+    const jogos = useSelector((state) => state.carrinho.lista)
+    const tamanho = jogos.length
     const dispatch = useDispatch()
 
     return (
@@ -14,7 +15,7 @@ function SelectionGames () {
                 <Wrapper>
                 <BsBox2 size={30}/>
                 <NumeroDeJogos>
-                    {numeroDeJogos}
+                    {tamanho}
                 </NumeroDeJogos>
                 </Wrapper>
             </Button>

@@ -1,16 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = {
+    lista: []
+}
+
 export const listaDeGames = createSlice({
-    name: 'lista de desejo',
-    initialState: {
-        list: [],
-    },
+    name: 'listaDeDesejos',
+    initialState,
     reducers: {
-        increment: (state, game_ID) => {
-            state.list.push(game_ID)
+        increment: (state, action) => {
+            if (!state.lista.includes(action.payload)) {
+                state.lista.push(action.payload);
+            }
         },
-        decrement: (state) => {
-            state.list.pop(game_ID)
+        decrement: (state, action) => {
+            if (state.lista.includes(action.payload)) {
+                state.lista.pop(action.payload)
+            }
         },
     },
 })

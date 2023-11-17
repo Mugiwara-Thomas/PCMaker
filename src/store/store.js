@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 import listaDeGames  from '../features/marketingCart/marketingCart'
 
-export default configureStore({
+export const store = configureStore({
   reducer: {
     carrinho: listaDeGames,
   },

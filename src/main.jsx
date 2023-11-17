@@ -16,7 +16,7 @@ import SelectGame from './pages/selectGame.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import Response from './pages/response.jsx';
 import Register from './pages/register.jsx';
-import store from './store/store.js';
+import {store} from './store/store.js';
 
 // variável que terá a lista de rotas
 const router = createBrowserRouter([
