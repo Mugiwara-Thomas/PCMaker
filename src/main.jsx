@@ -5,6 +5,7 @@ import {
   createBrowserRouter, 
   RouterProvider,
 } from "react-router-dom";
+import { Provider } from 'react-redux';
 
 // imports locais
 import App from './App.jsx';
@@ -15,6 +16,7 @@ import SelectGame from './pages/selectGame.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import Response from './pages/response.jsx';
 import Register from './pages/register.jsx';
+import store from './store/store.js';
 
 // variável que terá a lista de rotas
 const router = createBrowserRouter([
@@ -65,7 +67,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ResetCss />
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <ResetCss />
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 )

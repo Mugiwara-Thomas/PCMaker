@@ -1,4 +1,4 @@
-import { ButtonStyle } from "./style";
+import { ButtonStyle, ButtonRequestStyle } from "./style";
 
 
 function Button({texto}) {
@@ -11,4 +11,14 @@ function Button({texto}) {
     )
 }
 
+
+function ButtonRequest({texto, funcao}){
+    return(
+        <div>
+          <ButtonRequestStyle onClick={funcao}>{texto}</ButtonRequestStyle>
+        </div>
+      );
+}
+
+export { ButtonRequest }
 export default Button;
