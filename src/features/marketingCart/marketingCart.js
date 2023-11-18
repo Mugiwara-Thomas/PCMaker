@@ -15,7 +15,7 @@ export const listaDeGames = createSlice({
         },
         decrement: (state, action) => {
             if (state.lista.includes(action.payload)) {
-                state.lista.pop(action.payload)
+                state.lista = state.lista.filter(id => id !== action.payload);
             }
         },
     },
