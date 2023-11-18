@@ -1,17 +1,23 @@
 import { Button, Input, NumeroDeJogos, Wrapper } from './style';
 import { BsBox2 } from 'react-icons/bs';
-import { useSelector, useDispatch } from 'react-redux';
-import { increment } from '../../features/marketingCart/marketingCart';
+import { useSelector } from 'react-redux';
+import { useState } from "react";
+import Cart from '../Cart';
 
 function SelectionGames () {
     const jogos = useSelector((state) => state.carrinho.lista)
     const tamanho = jogos.length
-    const dispatch = useDispatch()
+
+    const [cartIsVisible, setCartIsVisible] = useState(false);
+
+    const handleCartClick = () => {
+        setCartIsVisible(true);
+    };
 
     return (
         <Wrapper>
             <Input placeholder="Digite o nome do game"/>
-            <Button onClick={() => dispatch(increment())}>
+            <Button onClick={handleCartClick}>
                 <Wrapper>
                 <BsBox2 size={30}/>
                 <NumeroDeJogos>
@@ -19,6 +25,7 @@ function SelectionGames () {
                 </NumeroDeJogos>
                 </Wrapper>
             </Button>
+            <Cart isVisible={cartIsVisible} setIsVisible={setCartIsVisible} />
         </Wrapper>
     );
 }
