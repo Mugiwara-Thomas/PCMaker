@@ -44,7 +44,7 @@ function SelectGame() {
         <SelectionGames />
         <Painel response={false}>
         {jogos.map((jogo) => (
-          <Button texto={jogo.name} key={jogo.ID} ID={jogo.ID}/>
+          <Card endereco={jogo.image} nome={jogo.name} key={jogo.ID} ID={jogo.ID}/>
         ))}
           {/*<Card
             endereco={
