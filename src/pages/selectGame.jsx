@@ -8,6 +8,7 @@ import FooterBar from "../components/Footer";
 import { WrapperGeneral } from "../styles/GridApp";
 import SelectionGames from "../components/SelectionGames";
 import { useState } from "react";
+import ConfirmButton from "../components/ConfirmButton";
 
 // Vai mudar dps
 import requestJogos from "../functions/requestGames";
@@ -52,6 +53,7 @@ function SelectGame() {
             }
           />*/}
         </Painel>
+        <ConfirmButton />
         {/*<PageChooserBar /> */}
         <FooterBar />
       </WrapperGeneral>

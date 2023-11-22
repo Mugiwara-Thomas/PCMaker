@@ -21,7 +21,7 @@ function Response() {
       <Nav  />
       <BoxViewOver>
         {/* <Accordion></Accordion> */}
-        <ButtonRequest texto="penis" funcao={requestJogos}></ButtonRequest>
+        <ButtonRequest texto="teste" funcao={requestJogos}></ButtonRequest>
       </BoxViewOver>
       <BoxViewUnder>
         <Painel >
