@@ -16,22 +16,23 @@ const CartContainer = styled.div`
   opacity: ${(props) => (props.isVisible ? "1" : "0")};
   transition: all 0.3s ease;
 
-  p {
-    color: #222222;
-  }
-`;
-
-const CartEscapeArea = styled.div`
+  `;
+  
+  const CartEscapeArea = styled.div`
   width: 100%;
-`;
-
-const CartContent = styled.div`
+  `;
+  
+  const CartContent = styled.div`
   height: 100%;
   min-width: 500px;
-  z-index: 200;
-  background-color: white;
+  background-color: rgb(31, 31, 31);
   padding: 20px;
-  overflow-y: scroll;
+  margin: auto 0;
+  // isso aqui adiciona scroll quando necessário
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (max-width: 768px) {
     min-width: 85%;
@@ -40,7 +41,8 @@ const CartContent = styled.div`
 const CartTitle = styled.p`
   font-size: 1.325rem;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin: 1pc;
+  color: white;
 `;
 const CartTotal = styled.p`
   font-weight: 600;

@@ -2,37 +2,27 @@ import Card from "../components/Card";
 import Nav from "../components/Navbar";
 import Painel from "../components/PainelGames";
 import GlobalStyle from "../styles/GlobalStyle";
-import PageChooserBar from "../components/PageChooser";
-import Button from "../components/Opcao";
 import FooterBar from "../components/Footer";
 import { WrapperGeneral } from "../styles/GridApp";
 import SelectionGames from "../components/SelectionGames";
 import { useState } from "react";
-import ConfirmButton from "../components/ConfirmButton";
-
-// Vai mudar dps
 import requestJogos from "../functions/requestGames";
-
-
-// ------------ Descobrir os jogos do usuario ---------------
-// pegar lista de jogos - (redux ou requisião) [x]
-// cria um elemento pra cada item da lista -> checkbox (nome do jogo) [x]
-// quando selecionar adicionar em uma lista dentro do redux [x]
-
-// ------------ Confirmar os jogos do usuario ----------------
-// Tela de carrinho do usuario [ ]
-// Mostrar Na tela os jogos escolhidos [ ]
-// Botão de confirmar que faz uma requisição pedindo a recomendaçãp [ ]
-// Enviar para tela de response quando confirmar a recomendação [ ]
-
+import { useDispatch } from 'react-redux';
+import { incrementAll } from "../features/marketingCart/marketingCart";
 
 function SelectGame() {
+  const dispatch = useDispatch()
   const [jogos, setJogos] = useState([])
+  
 
   async function requisicao_aux(){
     let dados = await requestJogos();
     setJogos(dados);
+    dispatch(incrementAll(dados)) 
+    // console.log(allGames)
   }
+
+
   
   requisicao_aux()
 
@@ -53,7 +43,7 @@ function SelectGame() {
             }
           />*/}
         </Painel>
-        <ConfirmButton />
+
         {/*<PageChooserBar /> */}
         <FooterBar />
       </WrapperGeneral>
