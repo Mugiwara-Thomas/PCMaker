@@ -4,11 +4,16 @@ const BoxViewOver = styled.div`
   width: 85%;
   height: auto;
   overflow: hidden;
-  align-content: center;
+  align-content: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0.8pc auto;
   grid-area: pecas;
   border-radius: 10px;
   background-color: #9B469A;
+  align-items: center;
+
 `;
 
 const BoxViewUnder = styled.div`
@@ -79,5 +84,6 @@ const BoxRegisterInner = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
 
 export { BoxViewOver, BoxViewUnder, BoxLogin, ContainerLogin, BoxLoginInner, ContainerRegister, BoxRegisterInner };

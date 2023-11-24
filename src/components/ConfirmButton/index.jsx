@@ -13,7 +13,9 @@ function ConfirmButton() {
   // const history = useHistory(); // Instancie o useHistory
   let requisitosMinimos
   let requisitosRecomendados;
-  let specsID = 0;
+  let specsID = Math.floor(Math.random() * 1000) + 1;
+
+  
 
   // Funções
   const handleClick = async () => {
@@ -25,7 +27,6 @@ function ConfirmButton() {
 
         dispatch(incrementMinimo(requisitosMinimos));
         dispatch(incrementRecomendado(requisitosRecomendados));
-        specsID = Math.floor(Math.random() * 1000) + 1;
 
       } else {
         console.log('A lista de jogos está vazia.');
