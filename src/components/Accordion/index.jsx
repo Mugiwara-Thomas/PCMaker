@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaShoppingCart } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
 const CustomComponent = styled.div`
   width: 85%;
@@ -60,12 +59,12 @@ const Accordion = ({texto, children, link}) => {
             {texto}
           </Paragrafo>
         </InnerContainer>
-        <Link to={link}>
+        <a href={link} target='_blank'>
         <Botao>
           <FaShoppingCart />
           Comprar
         </Botao>
-        </Link>
+        </a>
       </CustomComponent>
     </>
   );
