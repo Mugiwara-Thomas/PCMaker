@@ -1,4 +1,5 @@
 import { NavBar, List, Item, Logo } from "./style";
+import { Link } from 'react-router-dom';
 
 function Nav() {
   return (
@@ -11,7 +12,9 @@ function Nav() {
           </Logo>
         </List>
         <List>
-          <Item>Home</Item>
+          <Link to="/">
+            <Item>Home</Item>
+          </Link>
           <Item>About</Item>
         </List>
         <List>

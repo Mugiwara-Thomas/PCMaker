@@ -7,14 +7,14 @@ import Card from "../components/Card";
 import { BoxViewOver, BoxViewUnder } from "../components/BoxView";
 import { useSelector } from 'react-redux';
 import Accordion from "../components/Accordion";
-import Button, {ButtonResponse} from "../components/Button";
+import { ButtonResponse } from "../components/Button";
 
 function Response() {
   
   useEffect(() => {
     const timeout = setTimeout(() => {
       setCarregado(true);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -38,12 +38,13 @@ function Response() {
     if (minimo) {
       setMinimo(false);
       setSpecsAtuais(specsRecomendadas);
+      console.log(specsAtuais)
     } else {
       setMinimo(true);
       setSpecsAtuais(specsMinimas);
     }
   }
-
+console.log(specsAtuais.ram.imgage)
   return (
     <>
       {carregado && (
@@ -55,9 +56,10 @@ function Response() {
               <ButtonResponse texto={"Alterar Requisito"} />
             </div>
             <>
-              <Accordion texto={specsAtuais.cpu?.Model} />
-              <Accordion texto={specsAtuais.gpu?.Model} />
-              <Accordion texto={specsAtuais.ram?.Model} />
+              <Accordion texto={specsAtuais.cpu?.Model} children={specsAtuais.cpu?.imgage} link={specsAtuais.cpu?.link} />
+              <Accordion texto={specsAtuais.gpu?.Model} children={specsAtuais.gpu?.imgage} link={specsAtuais.gpu?.link} />
+              <Accordion texto={specsAtuais.ram?.size} children={specsAtuais.ram?.imgage} link={specsAtuais.ram?.link} />
+              <Accordion texto={specsAtuais.Motherboard?.Model} children={specsAtuais.Motherboard?.imgage} link={specsAtuais.Motherboard?.link} />
             </>
           </BoxViewOver>
           <BoxViewUnder>

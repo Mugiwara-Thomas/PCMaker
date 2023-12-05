@@ -27,7 +27,7 @@ function ConfirmButton() {
 
         dispatch(incrementMinimo(requisitosMinimos));
         dispatch(incrementRecomendado(requisitosRecomendados));
-
+        
       } else {
         console.log('A lista de jogos está vazia.');
       }
