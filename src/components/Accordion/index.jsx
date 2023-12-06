@@ -45,8 +45,7 @@ const Botao = styled.button`
 
 const InnerContainer = styled.div`
   display: flex;
-  justify-content: center; /* ou o alinhamento desejado */
-  /* Adicione mais estilos conforme necessário */
+  justify-content: center;
 `;
 
 const Accordion = ({texto, children, link}) => {
@@ -72,3 +71,4 @@ const Accordion = ({texto, children, link}) => {
 
 
 export default Accordion;
+export { InnerContainer, CustomComponent };
