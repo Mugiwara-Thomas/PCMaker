@@ -7,7 +7,7 @@ const PainelElement = styled.div`
     display: flex;
     padding-bottom: 100px;  
     ${(props) => {
-        if(props.response !== true){
+        if(props.response != true){
             return `flex-wrap: wrap;`
         }
     }}
@@ -16,7 +16,7 @@ const PainelElement = styled.div`
     grid-area: main;
     
     ${(props) => {
-        if(props.response === true){
+        if(props.response == true){
             return `justify-content:center;`
         }
     }}

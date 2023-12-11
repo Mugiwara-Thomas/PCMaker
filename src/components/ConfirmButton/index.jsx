@@ -4,6 +4,7 @@ import requestResponse from '../../functions/requestResponse';
 import { StyledButton } from './style';
 import { incrementMinimo, incrementRecomendado } from '../../features/marketingCart/marketingCart'
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 // import { useHistory } from 'react-router-dom'
 
 function ConfirmButton() {
@@ -11,23 +12,25 @@ function ConfirmButton() {
   const dispatch = useDispatch();
   const lista = useSelector((state) => state.carrinho.lista)
   // const history = useHistory(); // Instancie o useHistory
-  let requisitosMinimos
-  let requisitosRecomendados;
-  let specsID = Math.floor(Math.random() * 1000) + 1;
+  let requisitosMinimos = ""
+  let requisitosRecomendados = "";
 
   
 
   // Funções
   const handleClick = async () => {
+    console.log("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
     try {
       if (lista.length > 0) {
         const requisitos = await requestResponse(lista);
         requisitosMinimos = requisitos.minimun;
         requisitosRecomendados = requisitos.recommended;
-
+        
+        
         dispatch(incrementMinimo(requisitosMinimos));
         dispatch(incrementRecomendado(requisitosRecomendados));
         
+
       } else {
         console.log('A lista de jogos está vazia.');
       }
@@ -39,7 +42,7 @@ function ConfirmButton() {
   return (
     <>
       {lista.length > 0 ? (
-        <Link to={`/selectGame/response/${specsID}`}>
+        <Link to={`/selectGame/response`}>
           <StyledButton onClick={handleClick}>Confirmar</StyledButton>
         </Link>
       ) : (

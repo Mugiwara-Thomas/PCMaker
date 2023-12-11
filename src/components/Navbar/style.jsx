@@ -24,6 +24,8 @@ const Logo = styled.h1`
 `;
 
 const Item = styled.li`
+  text-decoration: none;
+  color: #fff;
   font-size: 1pc;
   padding: 1.5pc;
   cursor: pointer;

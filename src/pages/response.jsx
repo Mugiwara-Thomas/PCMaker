@@ -14,7 +14,7 @@ function Response() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setCarregado(true);
-    }, 3000);
+    }, 18000);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -26,10 +26,16 @@ function Response() {
 
   const [minimo, setMinimo] = useState(true)
   const [carregado, setCarregado] = useState(false);
+
   const [specsAtuais, setSpecsAtuais] = useState(specsMinimas);
+  useEffect(() => {
+    // Verifica se specsMinimas já está disponível
+    if (specsMinimas) {
+      setSpecsAtuais(specsMinimas);
+    }
+  }, [specsMinimas]);
 
-
-
+  console.log(specsAtuais)
   const selectedGamesInfo = allGames.filter((game) =>
     cartGames.includes(game.ID)
   );
@@ -44,7 +50,6 @@ function Response() {
       setSpecsAtuais(specsMinimas);
     }
   }
-console.log(specsAtuais.ram.imgage)
   return (
     <>
       {carregado && (

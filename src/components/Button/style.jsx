@@ -54,5 +54,23 @@ const ButtonRequestStyle = styled.button`
   border-radius: 3px;
 `;
 
+const ButtonStyleHome = styled.button`
+  border-radius: 10px; 
+  font-size: 1.5pc; 
+  justify-content: center;
+  padding: 2pc 12pc;
 
-export { ButtonStyle, ButtonRequestStyle, ButtonStyleResponse};
+  background-color: #81047F; 
+  border: 1px solid #000;
+  cursor: pointer; 
+  margin-bottom: 1pc;
+  color: white; 
+  font-weight: bold;
+
+  &:hover {
+    background-color: #D961D7;
+  }
+`;
+
+
+export { ButtonStyle, ButtonRequestStyle, ButtonStyleResponse, ButtonStyleHome};

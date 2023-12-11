@@ -12,6 +12,7 @@ const CustomComponent = styled.div`
   display: flex; /* Usa flexbox para alinhar os itens */
   align-items: center; /* Centraliza verticalmente os itens dentro do container */
   justify-content: space-between; /* Alinha os itens ao início do container */
+  overflow: hidden;
 `;
 
 const Paragrafo = styled.p`

@@ -12,10 +12,10 @@ function Nav() {
           </Logo>
         </List>
         <List>
-          <Link to="/">
-            <Item>Home</Item>
+          <Link to="/" style={{textDecoration: "none"}}>
+            <Item >Home</Item>
           </Link>
-          <Link to="/">
+          <Link to="/" style={{textDecoration: "none"}}>
             <Item>About</Item>
           </Link>
         </List>

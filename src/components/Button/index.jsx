@@ -1,4 +1,4 @@
-import { ButtonStyle, ButtonRequestStyle, ButtonStyleResponse } from "./style";
+import { ButtonStyle, ButtonRequestStyle, ButtonStyleResponse, ButtonStyleHome } from "./style";
 
 
 function Button({texto}) {
@@ -7,6 +7,16 @@ function Button({texto}) {
             <ButtonStyle>
                 {texto}
             </ButtonStyle>
+        </>
+    )
+}
+
+function ButtonHome({texto}) {
+    return (
+        <>
+            <ButtonStyleHome>
+                {texto}
+            </ButtonStyleHome>
         </>
     )
 }
@@ -30,5 +40,5 @@ function ButtonRequest({texto, funcao}){
       );
 }
 
-export { ButtonRequest , ButtonResponse }
+export { ButtonRequest , ButtonResponse, ButtonHome }
 export default Button;
