@@ -8,12 +8,15 @@ import { BoxViewOver, BoxViewUnder } from "../components/BoxView";
 import { useSelector } from 'react-redux';
 import Accordion from "../components/Accordion";
 import { ButtonResponse } from "../components/Button";
+import LoadingSpinner from "../components/Spinner";
 
 function Response() {
-  
+  const [loading, setLoading] = useState(true); // Novo estado para o loading
+  const [requisitoAtual, setRequisitoAtual] = useState("Mínimo"); // Estado para controlar o requisito atual
+
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setCarregado(true);
+      setLoading(false); // Ativa o loading quando o useEffect terminar
     }, 18000);
 
     return () => clearTimeout(timeout);
@@ -44,15 +47,20 @@ function Response() {
     if (minimo) {
       setMinimo(false);
       setSpecsAtuais(specsRecomendadas);
-      console.log(specsAtuais)
+      setRequisitoAtual("Recomendado"); // Atualiza o estado para "Recomendado"
     } else {
       setMinimo(true);
       setSpecsAtuais(specsMinimas);
+      setRequisitoAtual("Mínimo"); // Atualiza o estado para "Mínimo"
     }
   }
   return (
     <>
-      {carregado && (
+      {loading ? ( // Renderiza o spinner se estiver carregando
+        // Aqui pode ser o componente do spinner de loading
+        <LoadingSpinner />
+      ) : (
+        // Se o carregamento terminou, renderize o conteúdo normal
         <>
           <GlobalStyle />
           <Nav />
@@ -60,6 +68,7 @@ function Response() {
             <div onClick={mudarParaMinimo}>
               <ButtonResponse texto={"Alterar Requisito"} />
             </div>
+            <p>Requisito atual: {requisitoAtual}</p> 
             <>
               <Accordion texto={specsAtuais.cpu?.Model} children={specsAtuais.cpu?.imgage} link={specsAtuais.cpu?.link} />
               <Accordion texto={specsAtuais.gpu?.Model} children={specsAtuais.gpu?.imgage} link={specsAtuais.gpu?.link} />

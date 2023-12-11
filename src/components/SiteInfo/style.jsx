@@ -17,14 +17,14 @@ const Container = styled.div`
 const Subtitle = styled.h1`
     text-align: center;
     color: #FCFCFCEA;
-    font-size: 4em;
+    font-size: 2em;
 `;
 
 const Title = styled.h1`
     text-align: center;
-    padding: 0 0 0 3pc;
+    padding: 0 0 0 2pc;
     color: #fff;
-    font-size: 8em;
+    font-size: 5em;
     & .span2 {
         color: #352C35;
     }
@@ -41,8 +41,8 @@ const Content = styled.p`
 
 const Subcontent = styled.p`
   color: #fff;
-  font-size: 2em;
-  padding: 8pc 14.5pc 8pc 14.5pc;
+  font-size: 1.5em;
+  padding: 8pc 11.5pc 8pc 12.5pc;
   text-justify: inter-word;
 `;
 export { Container, Title, Content, Subtitle, Subcontent };

@@ -23,7 +23,7 @@ function App() {
             <Card endereco="https://cdn.akamai.steamstatic.com/steam/apps/1938090/header.jpg?t=1694122677" nome="Call of Duty" />
           </div>
           <div>
-            <img src="https://i.imgur.com/2ofAbKT.png" alt="Descrição da Imagem" width={"1200pc"} height={"653pc"}/>
+            <img src="https://i.imgur.com/2ofAbKT.png" alt="Descrição da Imagem" width={"750pc"} height={"auto"}/>
           </div>
         </CustomComponent>
       </BoxViewOver>
