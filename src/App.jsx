@@ -23,13 +23,11 @@ function App() {
       <BoxViewOver>
         <CustomComponent>
           <div>
-            <h2>Jogos Selecionados</h2>
             <Card endereco="https://i.imgur.com/9uocXr8.jpeg" nome="Fortnite" />
             <Card endereco="https://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1694635629" nome="Rainbow Six Siege" />
             <Card endereco="https://cdn.akamai.steamstatic.com/steam/apps/1938090/header.jpg?t=1694122677" nome="Call of Duty" />
           </div>
           <div>
-            <h2>Configurações Recomendadas</h2>
             <img src="https://th.bing.com/th/id/OIP.160o_-WlBOP_DAkf5ir9zgHaEK?w=286&h=180&c=7&r=0&o=5&pid=1.7" alt="Descrição da Imagem" />
           </div>
         </CustomComponent>

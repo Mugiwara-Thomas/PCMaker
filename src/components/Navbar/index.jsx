@@ -15,7 +15,9 @@ function Nav() {
           <Link to="/">
             <Item>Home</Item>
           </Link>
-          <Item>About</Item>
+          <Link to="/">
+            <Item>About</Item>
+          </Link>
         </List>
         <List>
           <Item>Login</Item>

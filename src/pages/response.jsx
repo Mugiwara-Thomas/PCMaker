@@ -60,6 +60,7 @@ console.log(specsAtuais.ram.imgage)
               <Accordion texto={specsAtuais.gpu?.Model} children={specsAtuais.gpu?.imgage} link={specsAtuais.gpu?.link} />
               <Accordion texto={specsAtuais.ram?.size} children={specsAtuais.ram?.imgage} link={specsAtuais.ram?.link} />
               <Accordion texto={specsAtuais.Motherboard?.Model} children={specsAtuais.Motherboard?.imgage} link={specsAtuais.Motherboard?.link} />
+              <Accordion texto={specsAtuais.fonte?.power} children={specsAtuais.fonte?.imgage} link={specsAtuais.fonte?.link} />
             </>
           </BoxViewOver>
           <BoxViewUnder>

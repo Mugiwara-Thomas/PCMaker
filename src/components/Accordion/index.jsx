@@ -49,6 +49,14 @@ const InnerContainer = styled.div`
 `;
 
 const Accordion = ({texto, children, link}) => {
+  if (!isNaN(texto) && parseInt(texto) < 65) {
+    texto = `${texto} GB de RAM`
+    // console.log(texto)
+  }
+  else if (!isNaN(texto) && parseInt(texto) > 150) {
+    texto = `${texto} Watts`
+  }
+
   return (
     <>
       <CustomComponent>
