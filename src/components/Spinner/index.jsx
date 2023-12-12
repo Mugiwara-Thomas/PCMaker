@@ -11,6 +11,7 @@ const spin = keyframes`
 const SpinnerContainer = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100vh; /* Ajuste a altura de acordo com a necessidade */
   background-color: rgba(0, 0, 0, 0.5); /* Cor preta com opacidade */
