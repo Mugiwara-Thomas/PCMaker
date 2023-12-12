@@ -35,6 +35,7 @@ const LoadingSpinner = () => {
   return (
     <SpinnerContainer>
       <Spinner />
+      <p>Carregando...</p>
     </SpinnerContainer>
   );
 };
